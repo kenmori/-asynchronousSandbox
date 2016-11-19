@@ -1,0 +1,26 @@
+{
+  "comments": [
+    {
+      "body": "some comment",
+      "id": 1,
+      "postId": 1
+    }
+  ],
+  "posts": [
+    {
+      "comments": "kenji",
+      "id": 1
+    },
+    {
+      "comments": "morita",
+      "id": 2
+    },
+    {
+      "comments": "ふぁふぁふぁf",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
