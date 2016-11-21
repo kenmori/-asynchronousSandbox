@@ -12,7 +12,6 @@ class Greet extends Component {
     req.onload = function () {
      console.log("fafa")
       if(req.status == 200){
-         console.log(req.response)
        resolve(req.response);
       } else {
        reject(Error(req.statusText));
@@ -24,14 +23,16 @@ class Greet extends Component {
      req.send();
    })
   }
-  async function ii (){
-   var uu = await hidouki('http://localhost:3000/posts');
-   console.log(uu);
+  async function asyncFunction (url){
+   var result = await hidouki(url);
+   return result;
   }
-  ii();
-  console.log("done")
+  asyncFunction('http://localhost:3000/posts')
+      .then((res)=> asyncFunction('http://localhost:3000/comments'))
+      .then((res)=> asyncFunction('http://localhost:3000/profile'))
+      .then((res)=> asyncFunction('http://localhost:3000/state'))
   return (
-          <ul id='result'></ul>
+   <ul id='result'></ul>
   )
  }
 }
