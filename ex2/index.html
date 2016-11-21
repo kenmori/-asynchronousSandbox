@@ -21,29 +21,6 @@
 	</div>
 </form>
 <div id="result"></div>
-<script>
-	var promiseFn = function (url){
-		return new Promise(function(result, reject){
-			var req = new XMLHttpRequest();
-			req.open('GET', url, true);
-			req.onload = function(){
-				if(req.status == 200){
-					result(req.response);
-				} else {
-					reject(Error(req.statusText));
-				}
-			};
-			req.onerror = function(){
-				reject(Error("Nettwork Error"));
-			}
-			req.send(null);
-		});
-	}
-	promiseFn('http://localhost:3000/posts').then(function(res){
-		var result = document.querySelector('#result');
-		console.log(res);
-	});
-
-</script>
+<script src="./bundle.js"></script>
 </body>
 </html>
