@@ -16,7 +16,7 @@ class Greet extends Component {
      }
     };
     req.onerror = function () {
-     reject(Error("Nettwork Error"))
+     reject(Error('Nettwork Error'))
     };
     req.send();
    });
@@ -36,7 +36,7 @@ class Greet extends Component {
    console.log(error);
   })
   return (
-          <ul id="result"></ul>
+          <ul id='result'></ul>
   )
  }
 }

@@ -4,28 +4,59 @@
 [http://kenjimorita.jp/promise_asyncawait_sandbox_hello_json_server](http://kenjimorita.jp/promise_asyncawait_sandbox_hello_json_server)
 
 
-##Step
+##ex1
 
-###1 yarn install
+env
+pure javascript / yarn / gulp
+
+###1
+cd ex1
+yarn install
 ※if you not yet install yarn,
 see: https://yarnpkg.com/en/docs/install
 
 ###2 gulp
-    http://localhost:8080/ex1/
+    http://localhost:8080
 
 open new window of terminal
 
-###3 cd ex1
+###3 json-server --watch db.json
 
-###4 json-server --watch db.json
-
-###5 if you using chrome as main browser,
+###4 if you using chrome as main browser,
 add extensions 「DHC REST Client」
 install : https://chrome.google.com/webstore/detail/dhc-rest-client/aejoelaoggembcahagimdiliamlcdmfm
 
 how to use
 「【API/DHC/使い方】APIテストに便利!「JSONSERVER」をLOCALに立ててAPIを返しローカルエディタや「DHC REST CLIENT」でPOSTやGETリクエストする」
 see: http://kenjimorita.jp/api_dhc_jsion_server_howto/
+
+
+----------------------------------------
+
+#ex2
+React - webpack - ES6 modules
+
+###1
+cd ex2
+
+###2
+npm install
+
+###3
+json-server --watch db.json
+npm start
+
+if you already run localserver by gulp, kill process and then 'npm start' again.
+
+###5
+visit
+http://localhost:8080
+
+###5
+npm run build
+
+http://localhost:8080/dist/
+
 
 
 
