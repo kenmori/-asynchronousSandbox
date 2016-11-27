@@ -10,9 +10,21 @@
     {
       "comments": "kenji",
       "id": 1
+    },
+    {
+      "comments": "もりた",
+      "id": 2
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+
+  "state" : [
+    {
+      "bool" : true
+    }
+  ]
 }
