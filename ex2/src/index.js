@@ -5,12 +5,12 @@ import 'babel-polyfill';
 
 class Greet extends Component {
  render() {
-   function hidouki(url){
+   function hidouki(url, num){
     return new Promise(function(resolve, reject){
      var req = new XMLHttpRequest();
     req.open('GET', url);
     req.onload = function () {
-     console.log("fafa")
+     console.log(num)
       if(req.status == 200){
        resolve(req.response);
       } else {
@@ -23,14 +23,16 @@ class Greet extends Component {
      req.send();
    })
   }
-  async function asyncFunction (url){
-   var result = await hidouki(url);
+  async function asyncFunction (url, num){
+   var result = await hidouki(url , num);
+   console.log(result);
    return result;
   }
-  asyncFunction('http://localhost:3000/posts')
-      .then((res)=> asyncFunction('http://localhost:3000/comments'))
-      .then((res)=> asyncFunction('http://localhost:3000/profile'))
-      .then((res)=> asyncFunction('http://localhost:3000/state'))
+  asyncFunction('http://localhost:3000/comments', 1)
+      .then((res)=> asyncFunction('http://localhost:3000/posts', 2))
+      .then((res)=> asyncFunction('http://localhost:3000/profile', 3))
+      .then((res)=> asyncFunction('http://localhost:3000/state', 4))
+      .then(() => console.log('done!'))
   return (
    <ul id='result'></ul>
   )
