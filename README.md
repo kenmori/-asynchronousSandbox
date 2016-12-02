@@ -2,12 +2,12 @@
 
 ##Overview
 [http://kenjimorita.jp/promise_asyncawait_sandbox_hello_json_server](http://kenjimorita.jp/promise_asyncawait_sandbox_hello_json_server)
+This is asynchronousSandbox
 
 
 ##ex1
 
-env
-pure javascript / yarn / gulp
+pure JavaScript / yarn / gulp
 
 ###1
 cd ex1
@@ -48,7 +48,7 @@ npm start
 
 if you already run localserver by gulp, kill process and then 'npm start' again.
 
-###5
+###4
 visit
 http://localhost:8080
 
@@ -56,6 +56,36 @@ http://localhost:8080
 npm run build
 
 http://localhost:8080/dist/
+
+----------------------------------------
+
+#ex3
+async/await way
+
+###1
+cd ex3
+
+###2
+npm install
+
+###3
+json-server --watch db.json
+npm start
+
+----------------------------------------
+
+#ex4
+co / generator function way
+
+###1
+cd ex4
+
+###2
+npm install
+
+###3
+json-server --watch db.json
+npm start
 
 
 
