@@ -48,6 +48,23 @@ class Greet extends Component {
    ];
    console.log(res[0], res[1], res[2]);
   }).catch(onerror);
+
+
+  function onSuccess(result) {
+   console.log('success', result)
+  }
+  function onError(e) {
+   console.log('error', e)
+  }
+
+
+  let p = co.wrap(function *(i){
+   return yield new Promise((resolve, reject) => {
+    return i%2 === 0 ? reject(new Error(i)) :resolve(i)
+   });
+  });
+  p(1).then(onSuccess).catch(onError)
+
   return (
    <ul id='result'></ul>
   )
