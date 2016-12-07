@@ -11,9 +11,10 @@ class Greet extends Component {
    console.log(result);
   }).catch(onerror);
 
-  var fn = co.wrap(function* (fa){
-    return yield Promise.resolve(fa);
+  var fn = co.wrap(function* (fa) {
+   return yield Promise.resolve(fa);
    console.log(fafa.add(fafa.num));
+  });
 
   //1 ジェネレータ、ジェネレータ関数、ジェネレータを返す関数をresolveするPromiseを返します。
   co(function* () {
