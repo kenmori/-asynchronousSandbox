@@ -1,10 +1,10 @@
-#asynchronousSandbox
+#asynchronous/Sandbox/playground
 
 ![asynchronouse](http://kenjimorita.jp/wp-content/uploads/2016/11/promise2.gif)
 
 ##Overview
 [http://kenjimorita.jp/promise_asyncawait_sandbox_hello_json_server](http://kenjimorita.jp/promise_asyncawait_sandbox_hello_json_server)
-This is asynchronousSandbox
+This is asynchronousSandbox/playground
 
 
 ##ex1
@@ -32,6 +32,13 @@ how to use
 「【API/DHC/使い方】APIテストに便利!「JSONSERVER」をLOCALに立ててAPIを返しローカルエディタや「DHC REST CLIENT」でPOSTやGETリクエストする」
 see: http://kenjimorita.jp/api_dhc_jsion_server_howto/
 
+
+###5 if you get an error like the one below
+Failed to load resource: net::ERR_CONNECTION_REFUSED
+
+move project root, and then hit this
+
+json-server --watch db.json
 
 ----------------------------------------
 
@@ -89,7 +96,20 @@ npm install
 json-server --watch db.json
 npm start
 
+----------------------------------------
+#ex5 co / other way
 
+----------------------------------------
+#ex6 co / webpack-env
+
+access
+http://localhost:8080/src/
+----------------------------------------
+#ex7 rx / co
+
+access
+http://localhost:8080/src/
+----------------------------------------
 
 
 

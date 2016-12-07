@@ -23,10 +23,15 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: ["babel-loader"],
-                query: { presets:['react', 'es2015', 'stage-3']}
+                query: {
+                    presets:['react', 'es2015', 'stage-3']
+                }
             },
-            {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
-        ],
+            {
+                test: /\.scss$/,
+                loaders: ["style-loader", "css-loader", "sass-loader"]
+            }
+        ]
     },
     sassLoader: {
         includePaths: [path.resolve(__dirname, "./some-folder")]
