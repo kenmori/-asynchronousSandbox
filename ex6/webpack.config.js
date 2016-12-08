@@ -7,14 +7,16 @@ const path = require("path");
 module.exports = {
     context: __dirname + "/src",
     entry: {
-        p1: "./index.js",
-        p2: "./index2.js",
-        commons: "./entry-for-commons-chunk"
+        page1: "./js/page1.js",
+        page2: "./js/page2.js",
+        page3: "./js/page3.js",
+        ap1: "./js/admin1.js",
+        ap2: "./js/admin2.js",
     },
 
     output: {
         path: __dirname + "/dist",
-        filename: "[name].bundle.js",
+        filename: "[name].js",
     },
 
     module: {
@@ -33,6 +35,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("[name].css"),
-        new commonsChunkPlugin('commons', 'common.chunk.js')
+        new commonsChunkPlugin('admin-commons.js', ['ap1', 'ap2']),
+        new commonsChunkPlugin('commons.js', ['page1', 'page2', 'admin-commons.js'])
     ]
 }

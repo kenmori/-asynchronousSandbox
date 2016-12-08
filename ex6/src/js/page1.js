@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import 'babel-polyfill';
 import co from 'co';
 
-class Greet extends Component {
+export class Greet extends Component {
  render() {
   co(function *(){
    // yield any promise
@@ -83,3 +83,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
  ReactDOM.render(<Greet />, document.querySelector('main'));
 })
 
+
+
+module.exports = {
+ test: function(){console.log(add(10))}
+}
