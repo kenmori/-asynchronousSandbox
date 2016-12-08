@@ -1,0 +1,1 @@
+webpackJsonp([1,5,6],[function(o,n){"use strict";o.exports={ga:function(o){console.log(o+" gaです")}}}]);

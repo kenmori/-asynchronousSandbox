@@ -1,0 +1,1 @@
+webpackJsonp([0,5,6],[function(o,n){"use strict";o.exports={add:function(o){console.log(o+" です")}}}]);

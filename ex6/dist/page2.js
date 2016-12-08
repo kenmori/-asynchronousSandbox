@@ -1,0 +1,1 @@
+webpackJsonp([3,5,6],[function(o,t){"use strict";o.exports={test:function(){console.log(add(10))}}}]);
