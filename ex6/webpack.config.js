@@ -27,11 +27,27 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: ["babel-loader"],
-                query: { presets:['react', 'es2015', 'stage-3']}
+                loader: 'babel',
+                // query: { presets:['react', 'es2015', 'stage-3']} //.babelrcへ
             },
-            {test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"]}
-        ],
+            {
+                test: /\.png$/,
+                loader: "url-loader?limit=1024"
+            },
+            //上と同じ
+            // {
+            //     test: /\.png$/,
+            //     loader: "url-loader",
+            //     query: {limit: 1024}//1023バイト以下の画像のURLのみを使うようにする
+            // },
+            {
+                test: /\.$/,
+                loaders: 'style!css!scss'//["style-loader", "css-loader", "sass-loader"]の略
+            }
+        ]
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']//import fafa from 'hoge'の拡張子なしに対応
     },
     sassLoader: {
         includePaths: [path.resolve(__dirname, "./some-folder")]
@@ -45,5 +61,9 @@ module.exports = {
                 warnings: false
             }
         })
-    ]
+    ],
+    devServer: {
+        inline: true,
+        hot: true
+    },
 }
