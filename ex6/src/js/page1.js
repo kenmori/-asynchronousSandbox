@@ -13,7 +13,7 @@ export class Greet extends Component {
 
   var fn = co.wrap(function* (fa) {
    return yield Promise.resolve(fa);
-   console.log(fafa.add(fafa.num));
+   console.log(fafa.add(fafaa.num));
   });
 
   //1 ジェネレータ、ジェネレータ関数、ジェネレータを返す関数をresolveするPromiseを返します。
@@ -41,7 +41,7 @@ export class Greet extends Component {
      }
     }
     req.onerror = function(){
-      console.log("error");
+      console.log("errofar");
     }
     req.send(null);
    });
@@ -53,14 +53,14 @@ export class Greet extends Component {
    var res = yield [
     promiseFun('http://localhost:3000/posts'),
     promiseFun('http://localhost:3000/profile'),
-    promiseFun('http://localhost:3000/state'),
+    promiseFun('http://localhost:3000/stafaff'),
    ];
    console.log(res[0], res[1], res[2]);
   }).catch(onerror);
 
 
   function onSuccess(result) {
-   console.log('success', result)
+   console.log('fafafa', result)
   }
   function onError(e) {
    console.log('error', e)
@@ -75,7 +75,7 @@ export class Greet extends Component {
   p(1).then(onSuccess).catch(onError)
 
   return (
-   <ul id='result'></ul>
+   <ul id='result'>fafa</ul>
   )
  }
 }
