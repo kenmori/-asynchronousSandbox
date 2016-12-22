@@ -111,7 +111,12 @@ access
 http://localhost:8080/src/
 ----------------------------------------
 
+#ex8 rx / co / flowType
 
+npm start
+
+access
+http://localhost:8080/src/
 
 
 
