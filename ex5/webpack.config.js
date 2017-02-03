@@ -10,7 +10,11 @@ module.exports = {
         path: __dirname + "/dist",
         filename: "bundle.js",
     },
-
+    devServer: {
+        contentBase: 'dist',
+        host: '0.0.0.0',
+        port: 80
+    },
     module: {
         loaders: [
             {

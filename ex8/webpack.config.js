@@ -8,7 +8,7 @@ module.exports = {
     context: __dirname + "/src",
     debug: true,
     devtool: '#eval-source-map',
-    entry: ["webpack/hot/dev-server","webpack-hot-middleware/client","./index.js" ],
+    entry: ["webpack-dev-server/client?http://0.0.0.0:80", "webpack/hot/dev-server","webpack-hot-middleware/client","./index.js" ],
     output: {
         path: __dirname + "/dist",
         publicPath: '/',
