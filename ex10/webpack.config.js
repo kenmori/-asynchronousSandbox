@@ -3,7 +3,6 @@ module.exports = {
     entry: {
         javascript: "./index.js",
         html: "./index.html",
-        css: "./index.css",
     },
 
     output: {
@@ -18,7 +17,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: ["babel-loader"],
                 query: {
-                    presets:['react', 'es2015', 'stage-3']
+                    presets:['react', ['es2015', {loose: true}], 'stage-3']
                 }
             },
             {
