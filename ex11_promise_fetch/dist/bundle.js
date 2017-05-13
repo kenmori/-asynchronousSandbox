@@ -78,17 +78,22 @@
 	  }
 
 	  Greet.prototype.render = function render() {
-	    function test(val) {
-	      return new _es6Promise.Promise(function (resolve, reject) {
-	        resolve("fafa");
-	      });
-	    }
-	    test("start").then(function (val) {
-	      alert(fetch);
-	    }, function () {
-	      alert("エラー");
+	    var img = document.createElement('img');
+	    fetch('./tap.jpeg').then(function (response) {
+	      return response.blob();
+	    }).then(function (myBlob) {
+	      img.src = URL.createObjectURL(myBlob);
+	      document.body.appendChild(img);
 	    });
-	    return _react2.default.createElement('ul', { id: 'result' });
+	    return _react2.default.createElement(
+	      'ul',
+	      { id: 'result' },
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement('img', { src: '' })
+	      )
+	    );
 	  };
 
 	  return Greet;

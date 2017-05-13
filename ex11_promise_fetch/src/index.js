@@ -8,18 +8,17 @@ import { Promise } from 'es6-promise';
 
 class Greet extends Component {
  render() {
-  function test(val){
-   return new Promise(function(resolve, reject){
-    resolve("fafa");
-   });
-  }
-  test("start").then(function(val){
-   alert(fetch);
-  }, function(){
-   alert("エラー")
-  });
+  var img = document.createElement('img');
+  fetch('./tap.jpeg').then(function(response){
+   return response.blob();
+  }).then(function(myBlob){
+   img.src = URL.createObjectURL(myBlob);
+   document.body.appendChild(img);
+  })
   return (
-   <ul id='result'></ul>
+   <ul id='result'>
+       <li><img src='' /></li>
+      </ul>
   )
  }
 }
