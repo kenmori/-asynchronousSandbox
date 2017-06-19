@@ -1,17 +1,23 @@
-*1*
+**1**
+
 cd ex2
 
-*2 モジュールのインストール*
+**2 モジュールのインストール**
+
 npm i (npmインストール済み)
 
-*3 仮想db立ち上げ*
-json-server --watch db.json 
-※adminはhttp://localhost:3000
+**3 仮想db立ち上げ**
 
-*4 local server立ち上げ*
+json-server --watch db.json 
+
+//adminはhttp://localhost:3000
+
+**4 local server立ち上げ**
+
 npm start 
 
-*5*
+**5 local表示**
+
 http://localhost:8080/webpack-dev-server/
 
 以降
