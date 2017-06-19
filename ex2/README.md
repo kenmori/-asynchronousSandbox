@@ -6,6 +6,8 @@ cd ex2
 
 npm i (npmインストール済み)
 
+npm i -D json-server
+
 **3 仮想db立ち上げ**
 
 json-server --watch db.json 
