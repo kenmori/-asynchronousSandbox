@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "body": "some comment",
+      "id": 1,
+      "postId": 1
+    }
+  ],
+  "posts": [
+    {
+      "comments": "kenji",
+      "id": 1
+    },
+    {
+      "comments": "もりた",
+      "id": 2
+    },
+    {
+      "comments": "fafa",
+      "id": 3
+    },
+    {
+      "comments": "fafa",
+      "id": 4
+    },
+    {
+      "comments": "fafa",
+      "id": 5
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+  "state": [
+    {
+      "bool": true
+    }
+  ]
+}
