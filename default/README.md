@@ -24,9 +24,4 @@ npm start
 
 http://localhost:8080/src/
 
-**6 build code**
-webpck
 
-
-TODO
-Watch the code and build it automatically
